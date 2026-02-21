@@ -1,6 +1,10 @@
 @echo off
 setlocal
 
+:: Eliminar archivos de prueba
+del /f /q "test.py"
+echo Archivo "test.py" eliminado.
+
 :: VARIABLES
 set f1="%USERPROFILE%\OneDrive\Desktop\gestor_dinero"
 set f2="%USERPROFILE%\OneDrive\Desktop\algorithms-python"
@@ -27,4 +31,4 @@ if %errorlevel% equ 0 (
 
 wt ^
     new-tab --title "Algoritmos Python" --colorScheme "%FINAL_SCHEME%" --tabColor %blue% --startingDirectory %f2% cmd ^
-    ; new-tab --title "Gestor Dinero" --colorScheme "%FINAL_SCHEME%" --tabColor %green% --startingDirectory %f1% cmd
+    ; new-tab --title "Gestor Dinero" --colorScheme "%FINAL_SCHEME%" --tabColor %green% --startingDirectory %f1% 
